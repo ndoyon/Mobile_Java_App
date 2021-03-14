@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name ="populateDBButton" type="id"/>
+    <item name ="nukeDBButton" type="id"/>
+    <item name ="deleteTermIC" type="id"/>
+
+</resources>

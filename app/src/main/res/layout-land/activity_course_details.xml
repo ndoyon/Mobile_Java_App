@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CourseDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/courseDetails_Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="#C8E4F1"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/courseDetails_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"
+        android:elevation="5dp"
+        android:text="Course Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:textColor="#2b3d6b"
+        app:layout_constraintBottom_toBottomOf="@+id/courseDetails_Toolbar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="5dp"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:textColor="#2b3d6b"
+        app:layout_constraintBottom_toBottomOf="@+id/courseDetails_Start"
+        app:layout_constraintStart_toEndOf="@+id/courseDetails_Start" />
+
+    <TextView
+        android:id="@+id/courseDetails_Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="5dp"
+        android:text="04/01/2021"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:textColor="#2b3d6b"
+        app:layout_constraintStart_toStartOf="@+id/courseDetails_Name"
+        app:layout_constraintTop_toBottomOf="@+id/courseDetails_Name" />
+
+    <TextView
+        android:id="@+id/courseDetails_End"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="5dp"
+        android:text="09/30/2021"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:textColor="#2b3d6b"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/courseDetailsStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:elevation="5dp"
+        android:text="In Progress"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:textColor="#2b3d6b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseDetails_Name" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/assessmentList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseDetails_Toolbar"
+        tools:listitem="@layout/standard_row" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tooltipText="Edit a Course"
+        app:backgroundTint="#171dac"
+        app:layout_constraintBottom_toBottomOf="@+id/fabNotes"
+        app:layout_constraintStart_toStartOf="@+id/fabAddCourse"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        app:useCompatPadding="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNotes"
+        android:tooltipText="Write a Note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="#555bec"
+        app:layout_constraintBottom_toTopOf="@+id/fabMentor"
+        app:layout_constraintStart_toStartOf="@+id/fabMentor"
+        app:srcCompat="?android:attr/actionModeFindDrawable"
+        app:useCompatPadding="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMentor"
+        android:tooltipText="Mentor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="#555bec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabAddCourse"
+        app:srcCompat="@android:drawable/ic_menu_myplaces"
+        app:useCompatPadding="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddCourse"
+        android:tooltipText="add a Course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="#555bec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:useCompatPadding="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:elevation="20dp"
+        android:text="Blank"
+        app:backgroundTint="#555bec"
+        app:layout_constraintBottom_toTopOf="@+id/courseDetailsStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+Student Scheduler Application
+C196_WGU
+
+Student: ndoyon1
+
+This application is a Student Scheduler application developed in Java using Android Studio
+Multiple activities include:
+-Terms
+-Courses
+-Assessments
+-Mentors
+-Course Notes
+
+
+Android Studio 4.1.2
+Build #AI-201.8743.12.41.7042882, built on December 19, 2020
+Runtime version: 1.8.0_242-release-1644-b3-6915495 x86_64
+VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
+macOS 10.15.7
+GC: ParNew, ConcurrentMarkSweep
+Memory: 1246M
+Cores: 4
+Registry: ide.new.welcome.screen.force=true, external.system.auto.import.disabled=true
+API: 30
+
+
+To start: Run application
+Select Start
+Choose a Term
+-Add or Edit a term in Term Details
+Choose a Course
+-Add or Edit a course in Course details
+-Add or Edit Mentors
+-Add or Edit Course Notes
+
+-Alerts and Notifications can be select

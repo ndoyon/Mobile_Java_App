@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TermDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/termDetailsToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="#C8E4F1"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/termName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"
+        android:elevation="5dp"
+        android:text="Spring 2021"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:textColor="#2b3d6b"
+        app:layout_constraintBottom_toBottomOf="@+id/termDetailsToolBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="5dp"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:textColor="#2b3d6b"
+        app:layout_constraintBottom_toBottomOf="@+id/termDetailsStart"
+        app:layout_constraintStart_toEndOf="@+id/termDetailsStart" />
+
+    <TextView
+        android:id="@+id/termDetailsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="5dp"
+        android:text="04/01/2021"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:textColor="#2b3d6b"
+        app:layout_constraintStart_toStartOf="@+id/termName"
+        app:layout_constraintTop_toBottomOf="@+id/termName" />
+
+    <TextView
+        android:id="@+id/termDetailsEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:elevation="5dp"
+        android:text="09/30/2021"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:textColor="#2b3d6b"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/termDetailsStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:elevation="5dp"
+        android:text="In Progress"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:textColor="#2b3d6b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termName" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/courseList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termDetailsToolBar"
+        tools:layout_editor_absoluteX="72dp"
+        tools:listitem="@layout/standard_row" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tooltipText="Add Course to Term"
+        app:backgroundTint="#555bec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:useCompatPadding="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tooltipText="Add Course to Term"
+        app:backgroundTint="#555bec"
+        app:layout_constraintBottom_toTopOf="@+id/fabAddCourse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        app:useCompatPadding="true" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
